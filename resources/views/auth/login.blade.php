@@ -24,9 +24,9 @@
                     <label for="password">Mot de passe</label>
                     <input id="password" name="password" type="password" placeholder="•••••••••••••••" class="w-full">
                 </div>
-
+                @error('email')
                 <p class="error-message">Exemple de message d'erreur</p>
-
+                @enderror
                 <div>
                     @csrf
                     <button class="primary w-full">Se connecter</button>

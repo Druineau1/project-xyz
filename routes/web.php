@@ -8,7 +8,7 @@ use App\Http\Controllers\LoginController;
 Route::get('/', [ExampleController::class, 'list']);
 Route::get('/profile', [ExampleController::class, 'show']);
 
-Route::get('/login', [LoginController::class, 'show'])->name('login');
+Route::get('/login', [LoginController::class, 'show'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/', HomeController::class)->middleware('auth');
